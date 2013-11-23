@@ -14,6 +14,11 @@ import edu.wpi.first.wpilibj.Relay;
 public class Gripper extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
+    Relay gripperRelay;
+    
+    public Gripper(){
+        gripperRelay = new Relay(1);
+    }
 
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
