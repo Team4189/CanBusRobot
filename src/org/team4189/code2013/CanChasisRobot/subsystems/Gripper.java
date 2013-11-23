@@ -18,7 +18,23 @@ public class Gripper extends Subsystem {
     
     public Gripper(){
         gripperRelay = new Relay(1);
+        gripperRelay.setDirection(Relay.Direction.kBoth);
     }
+    public void openGripper()
+    {
+        gripperRelay.set(Relay.Value.kForward);
+    }
+    
+    public void closeGripper()
+    {
+       gripperRelay.set(Relay.Value.kReverse);
+    }
+    public void stopGripper()
+    {
+        gripperRelay.set(Relay.Value.kOff);
+    }
+    
+    
 
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
