@@ -7,6 +7,7 @@ package org.team4189.code2013.CanChasisRobot.subsystems;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.CANJaguar;
 import edu.wpi.first.wpilibj.can.CANTimeoutException;
+import org.team4189.code2013.CanChasisRobot.commands.CanDriveWithJoysticks;
 
 /**
  *
@@ -56,5 +57,6 @@ public class CanChassis extends Subsystem {
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
+        setDefaultCommand(new CanDriveWithJoysticks());
     }
 }
