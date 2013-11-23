@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.team4189.code2013.CanChasisRobot.OI;
 import org.team4189.code2013.CanChasisRobot.subsystems.ExampleSubsystem;
 import org.team4189.code2013.CanChasisRobot.subsystems.CanChassis;
+import org.team4189.code2013.CanChasisRobot.subsystems.Gripper;
 
 /**
  * The base for all commands. All atomic commands should subclass CommandBase.
@@ -18,6 +19,7 @@ public abstract class CommandBase extends Command {
     // Create a single static instance of all of your subsystems
     public static ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
     public static CanChassis chassis = new CanChassis();
+    public static Gripper gripper = new Gripper();
 
     public static void init() {
         // This MUST be here. If the OI creates Commands (which it very likely
