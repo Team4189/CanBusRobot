@@ -29,16 +29,16 @@ public class CanChassis extends Subsystem {
         }
     }
     public final void canInit() throws CANTimeoutException {
-        leftJag = new CANJaguar(3,CANJaguar.ControlMode.kPercentVbus);
+        leftJag = new CANJaguar(4,CANJaguar.ControlMode.kPercentVbus);
         leftJag.setVoltageRampRate(524);
         leftJag.configNeutralMode(CANJaguar.NeutralMode.kCoast);
-        rightJag = new CANJaguar(4, CANJaguar.ControlMode.kPercentVbus);
+        rightJag = new CANJaguar(3, CANJaguar.ControlMode.kPercentVbus);
         rightJag.setVoltageRampRate(524);
         leftJag.configNeutralMode(CANJaguar.NeutralMode.kCoast);
     }
     public void setSpeed(double left, double right){
         try{
-            leftJag.setX(left);
+            leftJag.setX(-left);
             rightJag.setX(right);
         }catch(CANTimeoutException e){
             try{
