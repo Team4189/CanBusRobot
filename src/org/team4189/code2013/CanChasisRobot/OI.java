@@ -2,7 +2,6 @@
 package org.team4189.code2013.CanChasisRobot;
 
 import edu.wpi.first.wpilibj.buttons.Button;
-import edu.wpi.first.wpilibj.buttons.DigitalIOButton;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import org.team4189.code2013.CanChasisRobot.commands.*;
